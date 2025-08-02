@@ -1,4 +1,5 @@
-<!-- style.css -->
+/* style.css */
+
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
@@ -32,6 +33,20 @@ body {
   font-size: 1.2em;
 }
 
+/* 프로필 사진 스타일 */
+.profile-photo {
+  margin-bottom: 1rem;
+}
+
+.profile-photo img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+
 section {
   margin: 40px 0;
 }
@@ -52,13 +67,16 @@ ul {
 }
 
 ul li {
-  padding-left: 0;
   margin-bottom: 10px;
 }
 
 a {
   color: #2980b9;
   text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 footer {
