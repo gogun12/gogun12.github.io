@@ -21,7 +21,7 @@ body {
 
 /* 프로필 헤더 (사진, 이름, 직함) */
 .profile-header {
-    background: #2c3e50;
+    background: #3d5561;
     color: white;
     padding: 20px;
     text-align: center;
@@ -47,7 +47,7 @@ body {
 
 /* 연락처와 교육 정보 */
 .contact-education {
-    background: #34495e;
+    background: #4c6977;
     color: white;
     padding: 20px;
     font-size: 14px;
