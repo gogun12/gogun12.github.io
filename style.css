@@ -9,54 +9,68 @@ body {
     max-width: 1000px;
     margin: 0 auto;
     background: #fff;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .sidebar {
     width: 30%;
-    background: #2c3e50;
-    color: white;
-    padding: 20px;
+    display: flex;
+    flex-direction: column;
     box-sizing: border-box;
 }
 
-.sidebar h1 {
-    font-size: 24px;
-    margin-bottom: 5px;
-}
-
-.sidebar .title {
-    font-style: italic;
-    margin-bottom: 20px;
-}
-
-.sidebar .contact {
-    list-style: none;
-    padding: 0;
-    font-size: 14px;
-}
-
-.sidebar .contact li {
-    margin-bottom: 8px;
-}
-
-.sidebar h2 {
-    margin-top: 30px;
-    font-size: 18px;
-}
-
-.sidebar p {
-    font-size: 14px;
-    margin: 5px 0;
+/* 프로필 헤더 (사진, 이름, 직함) */
+.profile-header {
+    background: #2c3e50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-top-right-radius: 4px;
 }
 
 .profile-pic {
     width: 100px;
     height: 100px;
     border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.profile-header h1 {
+    font-size: 22px;
+    margin: 5px 0;
+}
+
+.profile-header .title {
+    font-style: italic;
+    font-size: 14px;
+}
+
+/* 연락처와 교육 정보 */
+.contact-education {
+    background: #34495e;
+    color: white;
+    padding: 20px;
+    font-size: 14px;
+    flex-grow: 1;
+    border-bottom-right-radius: 4px;
+}
+
+.contact-education .contact {
+    list-style: none;
+    padding: 0;
     margin-bottom: 20px;
 }
 
+.contact-education .contact li {
+    margin-bottom: 8px;
+}
+
+.contact-education h2 {
+    font-size: 16px;
+    margin-top: 0;
+}
+
+/* 메인 콘텐츠 */
 .main-content {
     width: 70%;
     padding: 20px;
@@ -93,6 +107,7 @@ body {
     font-size: 14px;
 }
 
+/* 반응형 */
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
@@ -106,5 +121,6 @@ body {
     .main-content .job .years {
         float: none;
         display: block;
+        margin-top: 4px;
     }
 }
