@@ -1,87 +1,110 @@
-/* style.css */
-
 body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  margin: 0;
-  padding: 0;
-  background: #f4f4f4;
-  color: #333;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f4f4f4;
 }
 
 .container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-  background: #fff;
+    display: flex;
+    max-width: 1000px;
+    margin: 0 auto;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-.header {
-  text-align: center;
-  padding: 50px 20px;
-  background: #2c3e50;
-  color: #ecf0f1;
+.sidebar {
+    width: 30%;
+    background: #2c3e50;
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
-.header h1 {
-  margin: 0;
-  font-size: 2.5em;
+.sidebar h1 {
+    font-size: 24px;
+    margin-bottom: 5px;
 }
 
-.header p {
-  margin-top: 10px;
-  font-size: 1.2em;
+.sidebar .title {
+    font-style: italic;
+    margin-bottom: 20px;
 }
 
-/* 프로필 사진 스타일 */
-.profile-photo {
-  margin-bottom: 1rem;
+.sidebar .contact {
+    list-style: none;
+    padding: 0;
+    font-size: 14px;
 }
 
-.profile-photo img {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  object-fit: cover;
-  display: block;
-  margin: 0 auto;
+.sidebar .contact li {
+    margin-bottom: 8px;
 }
 
-section {
-  margin: 40px 0;
+.sidebar h2 {
+    margin-top: 30px;
+    font-size: 18px;
 }
 
-section h2 {
-  border-bottom: 2px solid #2c3e50;
-  padding-bottom: 10px;
-  margin-bottom: 20px;
+.sidebar p {
+    font-size: 14px;
+    margin: 5px 0;
 }
 
-.item {
-  margin-bottom: 20px;
+.profile-pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 20px;
 }
 
-ul {
-  list-style: none;
-  padding: 0;
+.main-content {
+    width: 70%;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
-ul li {
-  margin-bottom: 10px;
+.main-content section {
+    margin-bottom: 30px;
 }
 
-a {
-  color: #2980b9;
-  text-decoration: none;
+.main-content h2 {
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    font-size: 20px;
 }
 
-a:hover {
-  text-decoration: underline;
+.main-content .job {
+    margin-bottom: 20px;
 }
 
-footer {
-  text-align: center;
-  padding: 20px;
-  background: #eee;
-  font-size: 0.9em;
+.main-content .job h3 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.main-content .job .place {
+    font-style: italic;
+}
+
+.main-content .job .years {
+    float: right;
+    color: gray;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar,
+    .main-content {
+        width: 100%;
+    }
+
+    .main-content .job .years {
+        float: none;
+        display: block;
+    }
 }
